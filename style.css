@@ -40,9 +40,11 @@ body {
 
 .runes {
     text-align: center;
-    font-size: 2rem;
+    font-size: clamp(1.2rem, 5vw, 2rem);
     color: #9fd0d0;
     margin-bottom: 16px;
+
+    white-space: nowrap;
 }
 
 h1 {
