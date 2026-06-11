@@ -133,3 +133,42 @@ button:hover {
         transform: translateY(0);
     }
 }
+
+.awaken {
+    animation: runeGlow 2s ease forwards;
+}
+
+@keyframes runeGlow {
+
+    0% {
+        color: #9fd0d0;
+        text-shadow: none;
+    }
+
+    100% {
+        color: white;
+        text-shadow:
+            0 0 10px #fff,
+            0 0 20px #bdf,
+            0 0 40px #bdf,
+            0 0 80px #9ff;
+    }
+}
+
+.opening {
+    animation: openGate 2s ease forwards;
+}
+
+@keyframes openGate {
+
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.15);
+        opacity: 0;
+        filter: brightness(2);
+    }
+}
