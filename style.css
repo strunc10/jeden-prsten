@@ -48,13 +48,14 @@ body {
 }
 
 .inscription {
-    margin-top: 10px;
+    margin-bottom: 20px;
+
     text-align: center;
 
-    color: #bfeeee;
-    font-size: clamp(1rem, 4vw, 1.5rem);
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
     letter-spacing: 0.25em;
 
+    color: #c7f7f7;
     opacity: 0;
 
     animation:
