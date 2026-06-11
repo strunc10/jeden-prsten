@@ -3,56 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rozlučka se svobodou</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            line-height: 1.6;
-        }
-
-        .box {
-            background: #f5f5f5;
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        h1 {
-            text-align: center;
-        }
-    </style>
+    <title>Brána</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>🎉 Rozlučka se svobodou 🎉</h1>
+<div class="mist">
+    <div class="gate">
 
-<div class="box">
-    <h2>Základní informace</h2>
+        <div class="runes">
+            ✦ ✧ ✦
+        </div>
 
-    <p><strong>Datum:</strong> 15. srpna 2026</p>
-    <p><strong>Sraz:</strong> 14:00</p>
-    <p><strong>Místo:</strong> Praha</p>
+        <h1>Brána západní síně</h1>
 
-    <h2>Program</h2>
-    <ul>
-        <li>14:00 – Sraz</li>
-        <li>15:00 – Aktivity</li>
-        <li>19:00 – Večeře</li>
-        <li>21:00 – Večerní program</li>
-    </ul>
+        <div id="dialog" class="dialog">
+            <p class="gate-text">
+                Cizinče...
+            </p>
 
-    <h2>Co s sebou</h2>
-    <ul>
-        <li>Dobrou náladu</li>
-        <li>Občanku</li>
-        <li>Oblečení na převlečení</li>
-    </ul>
+            <p class="gate-text">
+                Mnozí stáli před touto branou a nevěděli, jak vstoupit.
+            </p>
 
-    <h2>Kontakt</h2>
-    <p>Jan Novák – +420 777 123 456</p>
+            <p class="gate-text">
+                Nehledej sílu. Nehledej moc.
+            </p>
+
+            <p class="gate-text">
+                Promluv slovo, které sdílejí přátelé.
+            </p>
+        </div>
+
+        <div class="input-area">
+            <input
+                type="password"
+                id="password"
+                placeholder="..."
+                autocomplete="off"
+            >
+
+            <button id="enterBtn">
+                Promluvit
+            </button>
+        </div>
+
+        <p id="response" class="response"></p>
+
+    </div>
 </div>
 
+<script src="script.js"></script>
 </body>
 </html>
