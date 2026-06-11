@@ -62,19 +62,6 @@ body {
         inscriptionGlow 4s ease-in-out infinite;
 }
 
-.subtitle {
-    margin-top: 12px;
-
-    text-align: center;
-    color: rgba(191,238,238,.8);
-
-    font-style: italic;
-    opacity: 0;
-
-    animation: inscriptionFade 3s ease forwards;
-    animation-delay: 1s;
-}
-
 h1 {
     text-align: center;
     font-weight: normal;
