@@ -172,6 +172,33 @@ button:hover {
     }
 }
 
+@keyframes inscriptionFade {
+    from {
+        opacity: 0;
+        filter: blur(6px);
+    }
+
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+@keyframes inscriptionGlow {
+
+    0%,100% {
+        text-shadow:
+            0 0 4px rgba(180,255,255,.2);
+    }
+
+    50% {
+        text-shadow:
+            0 0 10px rgba(180,255,255,.6),
+            0 0 20px rgba(180,255,255,.4),
+            0 0 40px rgba(180,255,255,.2);
+    }
+}
+
 .opening {
     animation: openGate 2s ease forwards;
 }
