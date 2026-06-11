@@ -1,9 +1,11 @@
 const passwordInput = document.getElementById("password");
 const enterBtn = document.getElementById("enterBtn");
 const response = document.getElementById("response");
+const gate = document.querySelector(".gate");
+const runes = document.querySelector(".runes");
 
 const correctHash =
-    "c1863b86e8fce94f051cf9c1e8b8f7f1cf7928f9a783b7f4f1c54c2f7f9d564c";
+    "83006a438f94daf3a7dd9c7b27f70c15e443c0ca55d58fcdfa76899ae466b455";
 
 async function sha256(text) {
     const data = new TextEncoder().encode(text);
@@ -21,32 +23,49 @@ async function sha256(text) {
 async function tryEnter() {
 
     const value = passwordInput.value.trim().toLowerCase();
-
     const enteredHash = await sha256(value);
 
     if (enteredHash === correctHash) {
 
-        response.className = "response opened";
+        enterBtn.disabled = true;
+        passwordInput.disabled = true;
 
+        runes.classList.add("awaken");
+
+        response.className = "response opened";
         response.innerHTML =
-            "Brána poznala hlas přítele. Kámen se zachvěl a dávná cesta se otevřela...";
+            "Slovo bylo vysloveno...";
+
+        setTimeout(() => {
+            response.innerHTML =
+                "Pedo mellon a minno.";
+        }, 1800);
+
+        setTimeout(() => {
+            response.innerHTML =
+                "Brána rozpoznala přítele.";
+        }, 3800);
+
+        setTimeout(() => {
+            gate.classList.add("opening");
+        }, 5000);
 
         setTimeout(() => {
             window.location.href = "party.html";
-        }, 2500);
+        }, 7500);
 
     } else {
 
         response.className = "response error";
 
         response.innerHTML =
-            "Ticho. Jen vítr mezi horami. Brána neodpověděla.";
+            "Ticho. Kámen zůstává nehybný.";
     }
 }
 
 enterBtn.addEventListener("click", tryEnter);
 
-passwordInput.addEventListener("keydown", (e) => {
+passwordInput.addEventListener("keydown", e => {
     if (e.key === "Enter") {
         tryEnter();
     }
