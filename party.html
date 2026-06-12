@@ -1,11 +1,198 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-    <meta charset="UTF-8">
-    <title>Rozlučka</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Výprava do Českého (K)Ráje</title>
+
+<style>
+body {
+    margin: 0;
+    background: #0a0f12;
+    color: #d8e3e3;
+    font-family: Georgia, serif;
+    line-height: 1.8;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 25px;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: clamp(2rem, 6vw, 4rem);
+    font-weight: normal;
+    color: #d8ffff;
+}
+
+.hero .subtitle {
+    margin-top: 10px;
+    color: #9db4b4;
+    font-style: italic;
+}
+
+.card {
+    background: rgba(255,255,255,.03);
+    border: 1px solid rgba(180,255,255,.12);
+    border-radius: 14px;
+    padding: 30px;
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: #c8f4f4;
+    font-weight: normal;
+    margin-top: 0;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 12px;
+}
+
+.label {
+    color: #9db4b4;
+}
+
+.quote {
+    text-align: center;
+    font-style: italic;
+    color: #b8d6d6;
+    margin: 50px 0;
+}
+
+ul {
+    margin: 0;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+.footer {
+    text-align: center;
+    color: #8fa3a3;
+    margin-top: 60px;
+}
+</style>
 </head>
-<body style="background:black;color:white;font-family:Georgia;text-align:center;padding-top:100px;">
-    <h1>Vítej, poutníku.</h1>
-    <p>Sem později doplníme informace o výpravě.</p>
+<body>
+
+<div class="container">
+
+    <div class="hero">
+        <h1>Český (K)Ráj</h1>
+        <div class="subtitle">
+            Poslední výprava svobodného muže
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Vítej, Péťo</h2>
+
+        <p>
+            Pokud čteš tyto řádky, brána tě uznala za přítele a vpustila tě dál.
+        </p>
+
+        <p>
+            Před tebou je poslední velká výprava před vstupem do nové životní etapy.
+            Společenstvo bylo svoláno a přípravy jsou v plném proudu.
+        </p>
+
+        <p>
+            Některé podrobnosti zůstávají zahaleny tajemstvím, ale to nejdůležitější
+            najdeš zde.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Informace o výpravě</h2>
+
+        <div class="info-grid">
+            <div class="label">Datum</div>
+            <div>19. června 2026</div>
+
+            <div class="label">Místo</div>
+            <div>Český (K)Ráj</div>
+
+            <div class="label">Délka</div>
+            <div>Víkend</div>
+
+            <div class="label">Charakter</div>
+            <div>Pohoda, společnost a lehký sport</div>
+
+            <div class="label">Organizátoři</div>
+            <div>Společenstvo, které ví, co dělá (snad)</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Co si vzít s sebou</h2>
+
+        <ul>
+            <li>Doklady a běžné osobní věci</li>
+            <li>Oblečení na celý víkend</li>
+            <li>Pohodlnou obuv</li>
+            <li>Sportovní oblečení pro lehkou aktivitu</li>
+            <li>Nabitý telefon a nabíječku</li>
+            <li>Dobrou náladu</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Co zatím víme</h2>
+
+        <p>
+            Výprava povede krajinou skal, lesů a dalších míst hodných návštěvy.
+            Během cesty lze očekávat několik zastávek, společné aktivity,
+            dobré jídlo a dostatek příležitostí vytvořit nové historky.
+        </p>
+
+        <p>
+            Přesný itinerář bude odhalen ve správný čas.
+            Některá dobrodružství je lepší poznat až ve chvíli, kdy začnou.
+        </p>
+    </div>
+
+    <div class="quote">
+        „Ne všechny ty, kdo bloudí, lze považovat za ztracené.“
+    </div>
+
+    <div class="card">
+        <h2>Závěrečné poselství</h2>
+
+        <p>
+            Péťo,
+        </p>
+
+        <p>
+            dlouho jsi kráčel po vlastní cestě. Nyní se blíží den,
+            kdy začne nová kapitola.
+        </p>
+
+        <p>
+            Než k tomu dojde, čeká tě ještě jeden víkend mezi přáteli,
+            kteří tě na této cestě doprovázeli.
+        </p>
+
+        <p>
+            Dostav se připraven. O zbytek bude postaráno.
+        </p>
+    </div>
+
+    <div class="footer">
+        19.–21. června 2026 • Český (K)Ráj
+    </div>
+
+</div>
+
 </body>
 </html>
