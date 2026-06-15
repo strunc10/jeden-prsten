@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="cs">
+<!DOCTYPE html><html lang="cs">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Výprava do Českého (K)ráje</title>
-
-<style>
+<title>Výprava do Českého (K)ráje</title><style>
 body {
     margin: 0;
     background: #0a0f12;
@@ -22,7 +19,7 @@ body {
 
 .hero {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
 .hero h1 {
@@ -32,10 +29,17 @@ body {
     color: #d8ffff;
 }
 
-.hero .subtitle {
+.subtitle {
     margin-top: 10px;
     color: #9db4b4;
     font-style: italic;
+}
+
+.countdown {
+    margin-top: 24px;
+    color: #c8f4f4;
+    font-size: clamp(1rem, 3vw, 1.35rem);
+    letter-spacing: .05em;
 }
 
 .card {
@@ -44,6 +48,7 @@ body {
     border-radius: 14px;
     padding: 30px;
     margin-bottom: 25px;
+    backdrop-filter: blur(4px);
 }
 
 h2 {
@@ -62,6 +67,18 @@ h2 {
     color: #9db4b4;
 }
 
+.map-link {
+    color: #c8f4f4;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(200,244,244,.35);
+    transition: .2s;
+}
+
+.map-link:hover {
+    color: white;
+    border-bottom-color: rgba(255,255,255,.8);
+}
+
 .quote {
     text-align: center;
     font-style: italic;
@@ -71,6 +88,7 @@ h2 {
 
 ul {
     margin: 0;
+    padding-left: 20px;
 }
 
 li {
@@ -81,119 +99,184 @@ li {
     text-align: center;
     color: #8fa3a3;
     margin-top: 60px;
+    padding-bottom: 40px;
 }
-</style>
-</head>
-<body>
 
-<div class="container">
+@media (max-width: 700px) {
+    .container {
+        padding: 35px 20px;
+    }
 
-    <div class="hero">
-        <h1>Český (K)ráj</h1>
-        <div class="subtitle">
-            Poslední výprava svobodného muže
-        </div>
+    .card {
+        padding: 24px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    .label {
+        margin-top: 10px;
+        font-size: .95rem;
+    }
+}
+</style></head><body><div class="container"><div class="hero">
+    <h1>Český (K)ráj</h1>
+
+    <div class="subtitle">
+        Poslední výprava svobodného muže
     </div>
 
-    <div class="card">
-        <h2>Vítej, Péťo</h2>
-
-        <p>
-            Pokud čteš tyto řádky, brána tě uznala za přítele a vpustila tě dál.
-        </p>
-
-        <p>
-            Před tebou je poslední velká výprava před vstupem do nové životní etapy.
-            Společenstvo bylo svoláno a přípravy jsou v plném proudu.
-        </p>
-
-        <p>
-            Některé podrobnosti zůstávají zahaleny tajemstvím, ale to nejdůležitější
-            najdeš zde.
-        </p>
+    <div id="countdown" class="countdown">
+        Do výpravy zbývá…
     </div>
-
-    <div class="card">
-        <h2>Informace o výpravě</h2>
-
-        <div class="info-grid">
-            <div class="label">Datum</div>
-            <div>19. června 2026</div>
-
-            <div class="label">Místo</div>
-            <div>Český (K)ráj</div>
-
-            <div class="label">Délka</div>
-            <div>Víkend</div>
-
-            <div class="label">Charakter</div>
-            <div>Pohoda, společnost a lehký sport</div>
-
-            <div class="label">Organizátoři</div>
-            <div>Společenstvo, které ví, co dělá (snad)</div>
-        </div>
-    </div>
-
-    <div class="card">
-        <h2>Co si vzít s sebou</h2>
-
-        <ul>
-            <li>Doklady a běžné osobní věci</li>
-            <li>Oblečení na celý víkend</li>
-            <li>Pohodlnou obuv</li>
-            <li>Sportovní oblečení pro lehkou aktivitu</li>
-            <li>Mikina se může hodit</li>
-            <li>Ferratová výbava</li>
-            <li>Dobrou náladu</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h2>Co zatím víme</h2>
-
-        <p>
-            Výprava povede krajinou skal, lesů a dalších míst hodných návštěvy.
-            Během cesty lze očekávat několik zastávek, společné aktivity,
-            dobré jídlo a dostatek příležitostí vytvořit nové historky.
-        </p>
-
-        <p>
-            Přesný itinerář bude odhalen ve správný čas.
-            Některá dobrodružství je lepší poznat až ve chvíli, kdy začnou.
-        </p>
-    </div>
-
-    <div class="quote">
-        „Ne všechny ty, kdo bloudí, lze považovat za ztracené.“
-    </div>
-
-    <div class="card">
-        <h2>Závěrečné poselství</h2>
-
-        <p>
-            Péťo,
-        </p>
-
-        <p>
-            dlouho jsi kráčel po vlastní cestě. Nyní se blíží den,
-            kdy začne nová kapitola.
-        </p>
-
-        <p>
-            Než k tomu dojde, čeká tě ještě jeden víkend mezi přáteli,
-            kteří tě na této cestě doprovázeli.
-        </p>
-
-        <p>
-            Dostav se připraven. O zbytek bude postaráno.
-        </p>
-    </div>
-
-    <div class="footer">
-        19.–21. června 2026 • Český (K)Ráj
-    </div>
-
 </div>
 
-</body>
+<div class="card">
+    <h2>Vítej, Péťo</h2>
+
+    <p>
+        Pokud čteš tyto řádky, brána tě uznala za přítele a vpustila tě dál.
+    </p>
+
+    <p>
+        Před tebou je poslední velká výprava před vstupem do nové životní etapy.
+        Společenstvo bylo svoláno a přípravy jsou v plném proudu.
+    </p>
+
+    <p>
+        Některé podrobnosti zůstávají zahaleny tajemstvím, ale to nejdůležitější
+        najdeš zde.
+    </p>
+</div>
+
+<div class="card">
+    <h2>První shromáždění</h2>
+
+    <div class="info-grid">
+        <div class="label">Datum</div>
+        <div>19. června 2026</div>
+
+        <div class="label">Čas</div>
+        <div>XX:XX</div>
+
+        <div class="label">Místo svolání</div>
+        <div>
+            <a
+                class="map-link"
+                href="SEM_VLOŽ_ODKAZ_NA_MAPY"
+                target="_blank"
+                rel="noopener"
+            >
+                📍 Otevřít mapu
+            </a>
+        </div>
+
+        <div class="label">Výstroj pro první etapu</div>
+        <div>
+            Pohodlné cestovní oblečení a obuv vhodná na kratší přesun.
+            Další instrukce budou odhaleny ve správný čas.
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <h2>Informace o výpravě</h2>
+
+    <div class="info-grid">
+        <div class="label">Místo</div>
+        <div>Český (K)ráj</div>
+
+        <div class="label">Délka</div>
+        <div>Víkend</div>
+
+        <div class="label">Charakter</div>
+        <div>Pohoda, společnost a lehký sport</div>
+
+        <div class="label">Organizátoři</div>
+        <div>Společenstvo, které ví, co dělá (snad)</div>
+    </div>
+</div>
+
+<div class="card">
+    <h2>Co si vzít s sebou</h2>
+
+    <ul>
+        <li>Doklady a běžné osobní věci</li>
+        <li>Oblečení na celý víkend</li>
+        <li>Pohodlnou obuv</li>
+        <li>Sportovní oblečení pro lehkou aktivitu</li>
+        <li>Mikinu – večery v kraji bývají chladnější</li>
+        <li>Ferratovou výbavu</li>
+        <li>Dobrou náladu</li>
+    </ul>
+</div>
+
+<div class="card">
+    <h2>Co zatím víme</h2>
+
+    <p>
+        Výprava povede krajinou skal, lesů a dalších míst hodných návštěvy.
+        Během cesty lze očekávat několik zastávek, společné aktivity,
+        dobré jídlo a dostatek příležitostí vytvořit nové historky.
+    </p>
+
+    <p>
+        Přesný itinerář bude odhalen ve správný čas.
+        Některá dobrodružství je lepší poznat až ve chvíli, kdy začnou.
+    </p>
+</div>
+
+<div class="quote">
+    „Ne všechny ty, kdo bloudí, lze považovat za ztracené.“
+</div>
+
+<div class="card">
+    <h2>Závěrečné poselství</h2>
+
+    <p>Péťo,</p>
+
+    <p>
+        dlouho jsi kráčel po vlastní cestě. Nyní se blíží den,
+        kdy začne nová kapitola.
+    </p>
+
+    <p>
+        Než k tomu dojde, čeká tě ještě jeden víkend mezi přáteli,
+        kteří tě na této cestě doprovázeli.
+    </p>
+
+    <p>
+        Dostav se připraven. O zbytek bude postaráno.
+    </p>
+</div>
+
+<div class="footer">
+    19.–21. června 2026 • Český (K)ráj
+</div>
+
+</div><script>
+function updateCountdown() {
+    const eventDate = new Date("2026-06-19T00:00:00");
+    const now = new Date();
+
+    const diff = eventDate - now;
+
+    if (diff <= 0) {
+        document.getElementById("countdown").textContent =
+            "Výprava začíná!";
+        return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+
+    document.getElementById("countdown").textContent =
+        `Do výpravy zbývá ${days} dní a ${hours} hodin`;
+}
+
+updateCountdown();
+setInterval(updateCountdown, 60000);
+</script></body>
 </html>
