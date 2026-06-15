@@ -159,13 +159,13 @@ li {
         <div>19. června 2026</div>
 
         <div class="label">Čas</div>
-        <div>XX:XX</div>
+        <div>11:00</div>
 
         <div class="label">Místo svolání</div>
         <div>
             <a
                 class="map-link"
-                href="SEM_VLOŽ_ODKAZ_NA_MAPY"
+                href="https://mapy.com/s/famemorama"
                 target="_blank"
                 rel="noopener"
             >
@@ -175,7 +175,8 @@ li {
 
         <div class="label">Výstroj pro první etapu</div>
         <div>
-            Pohodlné cestovní oblečení a obuv vhodná na kratší přesun.
+            Pohodlné cestovní oblečení a obuv vhodná na delší přesun.
+            Ideální outfit je světlé/bílé triko nebo košile.
             Další instrukce budou odhaleny ve správný čas.
         </div>
     </div>
@@ -271,9 +272,11 @@ function updateCountdown() {
 
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
     const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60 )) % 60);
+    
 
     document.getElementById("countdown").textContent =
-        `Do výpravy zbývá ${days} dní a ${hours} hodin`;
+        `Do výpravy zbývá ${days} dní a ${hours} hodin a ${minutes} minut`;
 }
 
 updateCountdown();
